@@ -22,8 +22,8 @@ phases:
       - docker push $REPOSITORY_URI:latest
       - docker push $REPOSITORY_URI:$IMAGE_TAG
       - echo Writing image definitions file...
-      # "Phase3-repo" must exactly match the Container Name in your ECS Task Definition
-      - printf '[{"name":"Phase3-repo","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
+      # "phase3-repo" must exactly match the Container Name in your ECS Task Definition
+      - printf '[{"name":"phase3-repo","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
 
 artifacts:
   files:
